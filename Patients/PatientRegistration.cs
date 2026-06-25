@@ -24,8 +24,6 @@ public class PatientRegistration
     {
         var patient = await req.ReadFromJsonAsync<Patient>();
 
-        
-
         await _service.CreatePatientAsync(patient);
 
         var response = req.CreateResponse(HttpStatusCode.OK);
