@@ -24,9 +24,7 @@ public class PatientRegistration
     {
         var patient = await req.ReadFromJsonAsync<Patient>();
 
-        Console.WriteLine($"Id={patient?.id}");
-        Console.WriteLine($"Name={patient?.name}");
-        Console.WriteLine($"Phone={patient?.phoneNumber}");
+        
 
         await _service.CreatePatientAsync(patient);
 
